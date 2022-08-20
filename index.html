@@ -1,5 +1,32 @@
-<div id="app">
-  <input id="lowerLimit-inp" type="number" value=0 />
-  <input id="upperLimit-inp" type="number" value=100 />
-  <button id="fizzbuzz-btn">Fizz Buzz</button>
-</div>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
+  </head>
+  <body>
+    <input id="lowerLimit-inp" type="number" value="0" />
+    <input id="upperLimit-inp" type="number" value="100" />
+    <button id="fizzbuzz-btn">Fizz Buzz</button>
+    <br />
+    <br />
+    <select name="carsDropDown" id="carsDropDown">
+      <option value="car1">Car1</option>
+      <option value="car2">Car2</option>
+      <option value="car3">Car3</option>
+    </select>
+    <button id="Submit" onclick="displaySpeed()">Submit</button>
+    <br />
+    <div id="showSpeed">
+    </div>
+    <br />
+    <br />
+    <input id="changeSpeed-inp" type="number" placeholder="Change speed of selected car" />
+    <button onclick="changeSpeed()">Change Speed</button>
+  </body>
+</html>

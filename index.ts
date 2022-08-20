@@ -1,8 +1,5 @@
-// Import stylesheets
-import './style.css';
-
 // Write TypeScript code!
-const appDiv: HTMLElement = document.getElementById('app');
+/*
 const fizzbuzzBtn: HTMLButtonElement = <HTMLButtonElement>document.getElementById('fizzbuzz-btn')
 
 // adding an eventlister attaching the fizzbuzz function
@@ -29,8 +26,8 @@ function fizzbuzz() {
 
     counter++;
   }
-  
 }
+*/
 
 class Car {
   rego: string;
@@ -60,7 +57,25 @@ let car3: Car = new Car(20, '789ghi');
 let carList: Car[] = [car1, car2, car3];
 
 // Typescripts funky alternative for 'for' loop syntax
+/*
 for (let index in carList) {
   console.log(carList[index]);
 }
+*/
 
+function displaySpeed() {
+  let dropDownSelect: String = (document.getElementById('carsDropDown') as HTMLInputElement).value;
+  for (let i = 0; i < carList.length; i++) {
+    if(dropDownSelect === `car${i + 1}`) return (document.getElementById("showSpeed") as HTMLElement).innerHTML = `Car${i + 1}'s speed is ${carList[i].speed}km/h`;
+  }
+}
+
+function changeSpeed() { 
+  let dropDownSelect: String = (document.getElementById('carsDropDown') as HTMLInputElement).value;
+  const changeSpeedInp: HTMLInputElement = <HTMLInputElement>document.getElementById('changeSpeed-inp');
+  let changeSpeedValue: number = Number(changeSpeedInp.value);
+
+  for (let i = 0; i < carList.length; i++) {
+    if (dropDownSelect === `car${i + 1}`) return carList[i].increaseSpeed(changeSpeedValue);
+  }
+}
